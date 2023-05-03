@@ -47,7 +47,7 @@ export default function SearchResultList({ searchTerm, searchResults }: SearchTe
           </div>
         ) : (
           <div className={styles.resultList}>
-            <div className={styles.suggestionItem}>
+            <div className={styles.resultItem}>
               <SearchIcon />
               <span className={styles.boldText}>{searchTerm}</span>
             </div>
