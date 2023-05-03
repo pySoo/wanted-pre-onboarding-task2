@@ -16,7 +16,7 @@ const searchReducer = (state = initialState, action: any) => {
           [action.payload.searchTerm]: action.payload.searchResults,
         },
       };
-    case 'SET_PURGE':
+    case 'SET_EXPIRE':
       return initialState;
 
     default:

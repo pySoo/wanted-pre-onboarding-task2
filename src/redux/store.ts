@@ -1,4 +1,4 @@
-import { setPurge } from './actions/searchAction';
+import { setExpire } from './actions/searchAction';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { persistStore } from 'redux-persist';
 import persistReducer from '@/redux/reducers/persistReducer';
@@ -18,7 +18,7 @@ const persistor = persistStore(store);
 
 setInterval(() => {
   console.log('cache clear');
-  store.dispatch(setPurge());
+  store.dispatch(setExpire());
 }, EXPIRE_TIME); // 테스트용으로 1분마다 초기화
 
 export { store, persistor };

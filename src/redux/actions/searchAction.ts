@@ -6,6 +6,6 @@ export const setSearchResults = (searchTerm: string, searchResults: SearchResult
   },
 });
 
-export const setPurge = () => ({
-  type: 'SET_PURGE',
+export const setExpire = () => ({
+  type: 'SET_EXPIRE',
 });
