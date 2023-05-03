@@ -1,6 +1,5 @@
-import { ChangeEvent, FormEvent, useMemo } from 'react';
+import { ChangeEvent, FormEvent, useMemo, useState } from 'react';
 import { searchAPI } from '@/services/search';
-import { useState } from 'react';
 import SearchInput from '../SearchInput';
 import SearchResultList from '../SearchResultList.tsx';
 import { debounce } from 'lodash';
