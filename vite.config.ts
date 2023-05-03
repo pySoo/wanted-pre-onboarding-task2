@@ -10,5 +10,15 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    proxy: {
+      '/search/api': {
+        target: 'https://api.clinicaltrialskorea.com/api/v1',
+        changeOrigin: true,
+        secure: false,
+        rewrite: path => path.replace(/^\/search\/api/, ''),
+      },
+    },
+  },
   plugins: [react(), tsconfigPaths()],
 });
